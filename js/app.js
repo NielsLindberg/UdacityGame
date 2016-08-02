@@ -1,13 +1,10 @@
 var TILES_HEIGHT = 83;
 var TILES_WIDTH = 101;
-
-/* the speed multiplicator essentially is a multiplication factor on deltatime and the randomized speed integer
- * or in other words it represents how many times the speed integer is being multiplied to the time difference in
- * calculating the new x position
- */
 var SPEED_MULTIPLICATOR = (100 / 3);
 var NUMBER_OF_ENEMIES = 6;
 var TOP_OFFSET = TILES_HEIGHT / 2;
+var WHITESPACE_BUG = 2;
+var WHITESPACE_PLAYER = 20;
 
 /* Function i found to pick a random number in an interval, used to dertermine row & speed of bugs */
 function getRandomInt(min, max) {
@@ -40,13 +37,36 @@ Enemy.prototype.constructor = Enemy;
 Enemy.prototype.update = function(dt) {
     /* bugs are one directionally creatues, only leaping forward in life, hence we only have to check the upper bound */
     /* if the bug is out of bounds randomize new row & speed for it
-    */
+     */
     if (this.x > 505) {
         this.y = (getRandomInt(1, 4)) * TILES_HEIGHT - TOP_OFFSET;
         this.speed = getRandomInt(1, 6) * SPEED_MULTIPLICATOR;
         this.x = 0;
     }
     this.x = this.x + dt * this.speed;
+    this.checkCollisions();
+};
+
+/* since the Y positions only have a small set of possible outcomes and we know that
+ * for a player and an enemy to be on the same row they must have exactly the same y value
+ * we test for this collision first afterwards we check if the enemy is colliding on
+ * the horizontal pane with the player
+ * the bug has approximatly 2px whitespacing on each side and the player has approx 20px.
+ */
+Enemy.prototype.checkCollisions = function() {
+    if (player.y == this.y) {
+        /* the collideFromBefore represents a check on if there is a collision where the starting point of the bug is with a lower x value than the starting point
+         * of the player. the collideFromAfter represents a check if there is a collision where the starting point of the bug is larger than the starting point
+         * of the player
+         */
+        var collideFromBefore = (this.x + WHITESPACE_BUG < player.x + WHITESPACE_PLAYER && this.x + TILES_WIDTH - WHITESPACE_BUG > player.x + WHITESPACE_PLAYER);
+        var collideFromAfter = (this.x + WHITESPACE_BUG > player.x + WHITESPACE_PLAYER && this.x + WHITESPACE_BUG < player.x + TILES_WIDTH - WHITESPACE_PLAYER);
+        if (collideFromBefore || collideFromAfter) {
+            /* reset player x & y positions to start */
+            player.x = TILES_WIDTH * 2;
+            player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
+        }
+    }
 };
 
 /* the Player class is a subclass of the Unit class, it doesn't hold any unique properties however it has a
@@ -88,6 +108,17 @@ Player.prototype.update = function(xDiff, yDiff) {
     }
     if (this.y + yDiff <= 5 * TILES_HEIGHT - TOP_OFFSET && this.y + yDiff >= -TOP_OFFSET) {
         this.y = this.y + yDiff;
+    }
+    this.checkWinCondition();
+};
+
+/* if player's y value reaches the -TOP_OFFSET value it means that the player icon reached the water row and thereby won
+ * if the player has won the icon is simply reset to the initial position
+ */
+Player.prototype.checkWinCondition = function() {
+    if (this.y == -TOP_OFFSET) {
+        this.x = TILES_WIDTH * 2;
+        this.y = 5 * TILES_HEIGHT - TOP_OFFSET;
     }
 };
 

@@ -81,7 +81,6 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        checkCollisions();
         checkWinCondition();
     }
 
@@ -97,23 +96,6 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
-    }
-    /* since the Y positions only have a small set of possible outcomes and we know that
-     * for a player and an enemy to be on the same row they must have exactly the same y value
-     * we test for this collision first afterwards we check if the enemy is colliding on
-     * the horizontal pane with the player
-     * the bug has approximatly 2px whitespacing on each side and the player has approx 20px.
-     */
-    function checkCollisions() {
-        allEnemies.forEach(function(enemy, index) {
-            if (player.y == enemy.y) {
-                if ((enemy.x + 2 < player.x + 20 && enemy.x + TILES_WIDTH - 2 > player.x + 20) || (enemy.x + 2 > player.x + 20 && enemy.x + 2 < player.x + TILES_WIDTH - 20)) {
-                    /* reset player x & y positions to start */
-                    player.x = TILES_WIDTH * 2;
-                    player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
-                }
-            }
-        });
     }
     /* if player's y value reaches the -TOP_OFFSET value it means that the player icon reached the water row and thereby won
      * if the player has won the icon is simply reset to the initial position
