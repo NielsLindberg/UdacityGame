@@ -63,8 +63,7 @@ Enemy.prototype.checkCollisions = function() {
         var collideFromAfter = (this.x + WHITESPACE_BUG > player.x + WHITESPACE_PLAYER && this.x + WHITESPACE_BUG < player.x + TILES_WIDTH - WHITESPACE_PLAYER);
         if (collideFromBefore || collideFromAfter) {
             /* reset player x & y positions to start */
-            player.x = TILES_WIDTH * 2;
-            player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
+            player.reset();
         }
     }
 };
@@ -117,9 +116,13 @@ Player.prototype.update = function(xDiff, yDiff) {
  */
 Player.prototype.checkWinCondition = function() {
     if (this.y == -TOP_OFFSET) {
-        this.x = TILES_WIDTH * 2;
-        this.y = 5 * TILES_HEIGHT - TOP_OFFSET;
+        this.reset();
     }
+};
+
+Player.prototype.reset = function() {
+    this.x = TILES_WIDTH * 2;
+    this.y = 5 * TILES_HEIGHT - TOP_OFFSET;
 };
 
 /* Initiate enemies */
