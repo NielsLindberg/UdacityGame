@@ -78,9 +78,11 @@ var Engine = (function(global) {
      * functionality this way (you could just implement collision detection
      * on the entities themselves within your app.js file).
      */
+
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+        checkWinCondition();
     }
 
     /* This is called by the update function and loops through all of the
@@ -96,7 +98,32 @@ var Engine = (function(global) {
         });
         player.update();
     }
-
+    /* since the Y positions only have a small set of possible outcomes and we know that
+     * for a player and an enemy to be on the same row they must have exactly the same y value
+     * we test for this collision first afterwards we check if the enemy is colliding on
+     * the horizontal pane with the player
+     * the bug has approximatly 2px whitespacing on each side and the player has approx 15px.
+     */
+    function checkCollisions() {
+        allEnemies.forEach(function(enemy, index) {
+            if (player.y == enemy.y) {
+                if ((enemy.x + 2 < player.x + 20 && enemy.x + tilesWidth - 2 > player.x + 20) || (enemy.x + 2 > player.x + 20 && enemy.x + 2 < player.x + tilesWidth - 20)) {
+                    /* reset player x & y positions to start */
+                    player.x = tilesWidth * 2;
+                    player.y = 5 * tilesHeight - topOffset;
+                }
+            }
+        });
+    }
+    /* if player's y value reaches the -topOffset value it means that the player icon reached the water row and thereby won
+     * if the player has won the icon is simply reset to the initial position
+     */
+    function checkWinCondition() {
+        if (player.y == -topOffset) {
+            player.x = tilesWidth * 2;
+            player.y = 5 * tilesHeight - topOffset;
+        }
+    }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
      * game tick (or loop of the game engine) because that's how games work -
@@ -108,12 +135,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/water-block.png', // Top row is water
+                'images/stone-block.png', // Row 1 of 3 of stone
+                'images/stone-block.png', // Row 2 of 3 of stone
+                'images/stone-block.png', // Row 3 of 3 of stone
+                'images/grass-block.png', // Row 1 of 2 of grass
+                'images/grass-block.png' // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
