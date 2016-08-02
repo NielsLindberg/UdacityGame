@@ -39,7 +39,7 @@ Enemy.prototype.update = function(dt) {
     /* if the bug is out of bounds randomize new row & speed for it
      */
     if (this.x > 505) {
-        this.y = (getRandomInt(1, 4)) * TILES_HEIGHT - TOP_OFFSET;
+        this.y = getRandomInt(1, 4) * TILES_HEIGHT - TOP_OFFSET;
         this.speed = getRandomInt(1, 6) * SPEED_MULTIPLICATOR;
         this.x = 0;
     }
