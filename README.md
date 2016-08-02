@@ -8,7 +8,8 @@ Please refer to the official documentation for cloning a repository [here](https
 
 ### Without git clone.
 If you are unfamiliar with git and its commands follow the following steps:
-1. Click the clone or download button to the right.
-2. Select "download as Zip".
-3. Extract files to any folder.
-4. Enter selected folder and open the index.html file.
+
+1. Click the clone or download button to the right
+2. Select "download as Zip"
+3. Extract files to any folder
+4. Enter selected folder and open the index.html file
