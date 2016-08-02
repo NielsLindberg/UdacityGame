@@ -1,6 +1,5 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger Arcade Game
 
-Students should use this [rubric](https://www.udacity.com/course/viewer/#!/c-nd001/l-2696458597/m-2687128535) for self-checking their submission.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Installation
+In order to install and this programme, you'll have to clone this repository and open the index.html file in your browser.
+Please refer to the official documentation for cloning a repository [here](https://git-scm.com/docs/git-clone).

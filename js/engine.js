@@ -107,21 +107,21 @@ var Engine = (function(global) {
     function checkCollisions() {
         allEnemies.forEach(function(enemy, index) {
             if (player.y == enemy.y) {
-                if ((enemy.x + 2 < player.x + 20 && enemy.x + tilesWidth - 2 > player.x + 20) || (enemy.x + 2 > player.x + 20 && enemy.x + 2 < player.x + tilesWidth - 20)) {
+                if ((enemy.x + 2 < player.x + 20 && enemy.x + TILES_WIDTH - 2 > player.x + 20) || (enemy.x + 2 > player.x + 20 && enemy.x + 2 < player.x + TILES_WIDTH - 20)) {
                     /* reset player x & y positions to start */
-                    player.x = tilesWidth * 2;
-                    player.y = 5 * tilesHeight - topOffset;
+                    player.x = TILES_WIDTH * 2;
+                    player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
                 }
             }
         });
     }
-    /* if player's y value reaches the -topOffset value it means that the player icon reached the water row and thereby won
+    /* if player's y value reaches the -TOP_OFFSET value it means that the player icon reached the water row and thereby won
      * if the player has won the icon is simply reset to the initial position
      */
     function checkWinCondition() {
-        if (player.y == -topOffset) {
-            player.x = tilesWidth * 2;
-            player.y = 5 * tilesHeight - topOffset;
+        if (player.y == -TOP_OFFSET) {
+            player.x = TILES_WIDTH * 2;
+            player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
         }
     }
     /* This function initially draws the "game level", it will then call
