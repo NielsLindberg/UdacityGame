@@ -81,7 +81,6 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        checkWinCondition();
     }
 
     /* This is called by the update function and loops through all of the
@@ -96,15 +95,6 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
-    }
-    /* if player's y value reaches the -TOP_OFFSET value it means that the player icon reached the water row and thereby won
-     * if the player has won the icon is simply reset to the initial position
-     */
-    function checkWinCondition() {
-        if (player.y == -TOP_OFFSET) {
-            player.x = TILES_WIDTH * 2;
-            player.y = 5 * TILES_HEIGHT - TOP_OFFSET;
-        }
     }
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
