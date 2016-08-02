@@ -1,4 +1,3 @@
-
 var tilesHeight = 83;
 var tilesWidth = 101;
 
@@ -6,27 +5,36 @@ var tilesWidth = 101;
  * or in other words it represents how many times the speed integer is being multiplied to the time difference in
  * calculating the new x position
  */
-
 var speedMultiplicator = (100 / 3);
 var numberOfEnemies = 6;
 var topOffset = tilesHeight / 2;
-
-/* player icons and enemey icons, while they have the same height as the tiles for them to be alligned correctly
- * on the tiles we need to substract the y position with an offset set to half of the height of the "visual tile",
- * not the underlying picture height.
- */
-
-var Enemy = function(row, speed) {
-    this.sprite = 'images/enemy-bug.png';
-    this.x = 0;
-    this.y = row * tilesHeight - topOffset;
-    this.speed = speed * speedMultiplicator;
-};
 
 /* Function i found to pick a random number in an interval, used to dertermine row & speed of bugs */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+/* The superclass Unit holds the properties and methods that are in common between the enemy and the player
+ * In this case it is simply the variable for the image, the x & y positions and the render method
+ */
+var Unit = function(x, y, sprite) {
+    this.sprite = sprite;
+    this.x = x;
+    this.y = y;
+};
+
+// Draw the Unit on the screen, required method for game
+Unit.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+var Enemy = function(row, speed) {
+    Unit.call(this, 0, row * tilesHeight - topOffset, 'images/enemy-bug.png');
+    this.speed = speed;
+};
+
+Enemy.prototype = Object.create(Unit.prototype);
+Enemy.prototype.constructor = Enemy;
 
 /*Either adds new position based on speed or randomizes new speed and row if bug is outofbounds*/
 Enemy.prototype.update = function(dt) {
@@ -39,26 +47,12 @@ Enemy.prototype.update = function(dt) {
     this.x = this.x + dt * this.speed;
 };
 
-// Draw the enemy on the screen, required method for game
-Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
-
-var allEnemies = [];
-(function randomizeEnemies() {
-    for (n = 0; n < numberOfEnemies; n++) {
-        var row = getRandomInt(1, 4);
-        var speed = getRandomInt(1, 6);
-        allEnemies.push(new Enemy(row, speed));
-    }
-})();
-
 var Player = function() {
-    this.sprite = 'images/char-boy.png';
-    this.x = tilesWidth * 2;
-    this.y = 5 * tilesHeight - topOffset;
+    Unit.call(this, tilesWidth * 2, 5 * tilesHeight - topOffset, 'images/char-boy.png');
 };
 
+Player.prototype = Object.create(Unit.prototype);
+Player.prototype.constructor = Player;
 Player.prototype.handleInput = function(allowedKey) {
     switch (allowedKey) {
         case 'left':
@@ -71,7 +65,7 @@ Player.prototype.handleInput = function(allowedKey) {
             this.update(0, -tilesHeight);
             break;
         case 'down':
-                this.update(0, tilesHeight);
+            this.update(0, tilesHeight);
             break;
         default:
             this.x = this.x;
@@ -79,8 +73,7 @@ Player.prototype.handleInput = function(allowedKey) {
     }
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+/* updates the player positons with xDiff & yDiff if that doesnt put the player icon out of bounds */
 Player.prototype.update = function(xDiff, yDiff) {
     if (this.x + xDiff < 505 && this.x + xDiff > -tilesWidth) {
         this.x = this.x + xDiff;
@@ -90,11 +83,18 @@ Player.prototype.update = function(xDiff, yDiff) {
     }
 };
 
-// Draw the enemy on the screen, required method for game
-Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+/* Initiate enemies */
+var allEnemies = [];
+/* runs an anonymous self-invoking function. that creates the initial enemies */
+(function randomizeEnemies() {
+    for (n = 0; n < numberOfEnemies; n++) {
+        var row = getRandomInt(1, 4);
+        var speed = getRandomInt(1, 6);
+        allEnemies.push(new Enemy(row, speed * speedMultiplicator));
+    }
+})();
 
+/* initiate player */
 var player = new Player();
 
 // This listens for key presses and sends the keys to your

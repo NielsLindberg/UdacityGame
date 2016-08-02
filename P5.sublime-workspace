@@ -1,0 +1,397 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"y",
+				"y"
+			],
+			[
+				"header",
+				"pageHeaderHeight"
+			],
+			[
+				"bd",
+				"bd+	border: ${1:1px} ${2:solid} ${3:#000};"
+			],
+			[
+				"format",
+				"formattedDescription"
+			],
+			[
+				"formate",
+				"formattedDates"
+			],
+			[
+				"formatted",
+				"formattedTitle"
+			],
+			[
+				"formattedEm",
+				"formattedEmployer"
+			],
+			[
+				"formattedEmp",
+				"formattedEmployerTitle"
+			],
+			[
+				"card",
+				"card-container"
+			],
+			[
+				"bo",
+				"text-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Cont",
+				"Package Control: Install Package"
+			],
+			[
+				"Autoprefix CSS",
+				"Autoprefix CSS"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 571.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"Autoprefix CSS",
+			".jshintrc",
+			"view.run_command(\"jshint\")",
+			"$ bower install jquery",
+			"bower install jquery",
+			"npm install -g bower",
+			"bower install jquery",
+			"npm --version",
+			"install --save polymer",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Workspace/Udacity/P5/frontend-nanodegree-arcade-game",
+		"/D/Workspace/Udacity/P5/frontend-nanodegree-arcade-game/js"
+	],
+	"file_history":
+	[
+		"/D/Workspace/Udacity/P4/Gruntfile.js",
+		"/D/Workspace/Udacity/P5/frontend-nanodegree-arcade-game/js/engine.js",
+		"/D/Workspace/Udacity/P5/frontend-nanodegree-arcade-game/index.html",
+		"/D/Workspace/Udacity/P5/frontend-nanodegree-arcade-game/js/app.js",
+		"/D/Workspace/LTU/Assignment4/package.json",
+		"/D/workspace/LTU/Assignment4/README.md",
+		"/D/WoW Vanilla/realmlist.wtf",
+		"/D/Workspace/Udacity/P4/css/optimized/less.style.css",
+		"/D/Workspace/Udacity/P4/css/style.less",
+		"/D/Workspace/Udacity/P4/js/edu.js",
+		"/D/Workspace/Udacity/P4/js/work.js",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/D/Workspace/Udacity/P4/js/bio.js",
+		"/D/Workspace/Udacity/P4/js/map.js",
+		"/D/Workspace/Udacity/P4/projects.html",
+		"/D/Workspace/Udacity/P4/index.html",
+		"/D/Workspace/Udacity/P4/js/builder.js",
+		"/D/Workspace/Udacity/P4/js/optimized/built.js",
+		"/D/Workspace/Udacity/P4/js/projects.js",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/D/Workspace/Udacity/P4/css/style.css",
+		"/D/Workspace/Udacity/P4/js/footer.js",
+		"/D/Workspace/Udacity/P4/.gitignore",
+		"/D/Workspace/Udacity/P4/test/test",
+		"/D/Workspace/Udacity/P4/css/optimized/less.style.min.css",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/CSScomb/Default.sublime-keymap",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/LESS.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/LESS/LESS.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/LESS/README.md",
+		"/D/Workspace/Udacity/P4/css/optimized/style.min.css",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/Default.sublime-keymap",
+		"/D/Workspace/Udacity/P4/js/education.js",
+		"/D/Workspace/frontend-nanodegree-resume/index.html",
+		"/D/Workspace/frontend-nanodegree-resume/js/helper.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/D/Workspace/Udacity/P4/package.json",
+		"/D/Workspace/Udacity/P4/js/optimized/built.min.js",
+		"/D/workspace/udacity/p4/Gruntfile.js",
+		"/D/Workspace/Udacity/P3/js/bio.js",
+		"/D/Workspace/Udacity/P3/css/style.css",
+		"/D/Workspace/adhoc/lele.js",
+		"/D/Workspace/Udacity/P3/backup/index.html",
+		"/D/Workspace/Udacity/responsivedesign/Start/main.css",
+		"/D/Workspace/Udacity/responsivedesign/Start/responsive.css",
+		"/D/Workspace/Udacity/responsivedesign/Start/index.html",
+		"/D/workspace/udacity/responsivedesign/start/index.html",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/Workspace/Udacity/P2/building-the-prototype/card.html",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/english/stopbernie/stopbernie.md",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/stopbernie.md",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/stopbernie.txt",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/jump.md",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/README.md",
+		"/D/workspace/udacity/githubtraining/create-your-own-adventure/readme.txt",
+		"/D/workspace/udacity/githubtraining/readme.md",
+		"/D/workspace/udacity/githubtraining/recipes/cake-recipe.txt",
+		"/D/workspace/udacity/githubtraining/readme.txt",
+		"/D/workspace/udacity/githubtraining/recipes/chili-recipe.txt",
+		"/D/workspace/Udacity/Githubtraining/recipes/chili-recipe.txt",
+		"/D/workspace/Udacity/Githubtraining/recipes/yoyo-recipe.txt",
+		"/D/Workspace/Udacity/GitHubTraining/asteroids/game.js",
+		"/D/Workspace/Udacity/P2/building-the-prototype/styles.css",
+		"/D/Workspace/Udacity/GitHubTraining/version-control/reflections/lesson_1_reflections.txt",
+		"/C/Users/Niels/.bash_profile",
+		"/D/workspace/udacity/githubtraining/version-control/reflections/lesson_2_reflections.txt",
+		"/D/Workspace/Udacity/P1/index.html",
+		"/D/Workspace/udacity/githubtraining/asteroids/game.js",
+		"/C/Users/Niels/.bashrc",
+		"/C/Users/Niels/git-prompt.sh",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/ColorHighlighter.sublime-settings",
+		"/D/Workspace/Udacity/finish.html",
+		"/D/Workspace/Udacity/start.html",
+		"/D/Workspace/Udacity/writing-selectors/index.html",
+		"/D/Workspace/Udacity/P1/reflections.txt",
+		"/D/Workspace/Udacity/P1/P1",
+		"/D/Workspace/Udacity/index.html",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/D/Workspace/LTU/Assignment3/index.html",
+		"/D/Workspace/LTU/Assignment3/css/formstyle.css",
+		"/D/Workspace/LTU/Assignment3/supportform.html",
+		"/D/Workspace/LTU/Assignment3/css/style.css",
+		"/D/Workspace/Udacity/P0/growthmindset.html",
+		"/D/Workspace/LTU/AboutMe/css/style.css",
+		"/D/Workspace/LTU/AboutMe/about.html",
+		"/D/Workspace/LTU/AboutMe/js/bio.js",
+		"/D/Workspace/LTU/AboutMe/projects.nocss.html",
+		"/D/Workspace/LTU/AboutMe/index.html",
+		"/C/Users/Niels/Documents/Qlik/Sense/Extensions/WaterfallChart-master/waterfall.css",
+		"/D/Workspace/LTU/AboutMe/projectspage.html",
+		"/D/Workspace/LTU/AboutMe/index.nocss.html",
+		"/D/Workspace/LTU/AboutMe/js/education.js",
+		"/D/Workspace/LTU/AboutMe/js/work.js",
+		"/D/Workspace/LTU/AboutMe/js/builder.js",
+		"/D/Workspace/LTU/AboutMe/projectsclean.html",
+		"/D/Workspace/LTU/AboutMe/projects.html",
+		"/D/Workspace/LTU/AboutMe/indexclean.html",
+		"/C/Users/Niels/Desktop/Niels Lindberg-Poulsen, Portfolio.html",
+		"/D/Workspace/adhoc/table.html",
+		"/C/Users/Niels/Google Drive/IT-Study/LTU/D0015D - (37362-V16 - Webbutveckling I - Introduktion )/Assignment 2/En underbar titel på sidan.html",
+		"/D/Workspace/adhoc/CSSReset.com - Keeping Footer At The Bottom Of The Page/style.css",
+		"/D/Workspace/adhoc/CSSReset.com - Keeping Footer At The Bottom Of The Page/index.html",
+		"/C/Users/Niels/Downloads/CSSReset.com - Keeping Footer At The Bottom Of The Page.zip",
+		"/C/Users/Niels/Desktop/Resume.html",
+		"/D/Workspace/LTU/AboutMe/images/js/resumeBuilder.js",
+		"/D/Workspace/LTU/AboutMe/images/js/bio.js",
+		"/D/Workspace/LTU/AboutMe/js/resumeBuilder.js",
+		"/D/Workspace/LTU/AboutMe/AboutMe.sublime-project",
+		"/D/Workspace/GitTest/GitTest.sublime-project",
+		"/D/Workspace/GitTest/css/style.css",
+		"/D/Workspace/GitTest/css/customstyles.html",
+		"/D/Workspace/frontend-nanodegree-resume/css/style.css",
+		"/C/Users/Niels/Google Drive/IT-Study/Udacity/Front-end developer/FE Nanodegree Project 0/styles.css",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/D/Workspace/frontend-nanodegree-resume/bower.json",
+		"/D/Workspace/frontend-nanodegree-resume/js/psiresults.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/projects.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/jQuery.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/education.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/bio.js",
+		"/D/Workspace/frontend-nanodegree-resume/js/work.js",
+		"/D/Workspace/adhoc/psiresults.js"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"background",
+			"link",
+			"center",
+			"callback",
+			"googlemap",
+			"coin",
+			"style",
+			">: ",
+			"> ",
+			"Theyare",
+			"  ",
+			"really",
+			"Family",
+			"<div class=\"article\">\n<h1>Addams Family</h1>\n<p>They really are a scream the Addams Family.</p>\n<a href=\"#\">Read more +</a>\n</div>\n",
+			"class",
+			"About",
+			"=\"#\">",
+			"Home",
+			"=\"#\">",
+			"Home",
+			"here",
+			"border",
+			"'",
+			"\"",
+			"'",
+			"\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "P5.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

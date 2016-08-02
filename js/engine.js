@@ -102,7 +102,7 @@ var Engine = (function(global) {
      * for a player and an enemy to be on the same row they must have exactly the same y value
      * we test for this collision first afterwards we check if the enemy is colliding on
      * the horizontal pane with the player
-     * the bug has approximatly 2px whitespacing on each side and the player has approx 15px.
+     * the bug has approximatly 2px whitespacing on each side and the player has approx 20px.
      */
     function checkCollisions() {
         allEnemies.forEach(function(enemy, index) {
